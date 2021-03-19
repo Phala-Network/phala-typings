@@ -1,3 +1,7 @@
+# Polkadot.js Typings for Phala network
+
+[![npm version](https://img.shields.io/npm/v/@phala-network/typedefs?style=for-the-badge)](https://www.npmjs.com/package/@phala-network/typedefs)
+
 ## Building
 
 To build this package, run the following commands:
