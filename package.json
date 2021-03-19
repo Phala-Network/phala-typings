@@ -1,0 +1,33 @@
+{
+  "name": "@phala-network/typedefs",
+  "devDependencies": {
+    "@polkadot/typegen": "^4.1.1",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.22.0",
+    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "typescript": "^4.2.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "main": "dist/index.js",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "generate:defs": "ts-node --skip-project node_modules/@polkadot/typegen/scripts/polkadot-types-from-defs.cjs --package '.' --input ./src/interfaces",
+    "generate:meta": "ts-node --skip-project node_modules/@polkadot/typegen/scripts/polkadot-types-from-chain.cjs --package '.' --endpoint wss://poc4.phala.network/ws --output ./src/interfaces"
+  },
+  "types": "dist/index.d.ts",
+  "version": "0.0.4-poc4"
+}

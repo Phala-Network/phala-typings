@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "outDir": "./dist",
+        "paths": {
+            "@polkadot/api/augment": [
+                "./src/interfaces/augment-api.ts"
+            ],
+            "@polkadot/types/augment": [
+                "./src/interfaces/augment-types.ts"
+            ]
+        },
+        "strict": true,
+        "target": "esnext",
+        "typeRoots": [
+            "./node_modules/@types"
+        ]
+    },
+    "exclude": [
+        "dist/**/*",
+        "node_modules"
+    ],
+    "include": [
+        "src"
+    ]
+}
